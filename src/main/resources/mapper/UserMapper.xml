@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.ltf.mp.springboot.mapper.UserMapper">
+
+    <!--在application.properties中配置了实体类扫描包路径，所以不用写全路径名-->
+<!--    <select id="findById" resultType="net.ltf.mp.springboot.domain.User">-->
+    <select id="findById" resultType="User">
+        select * from tb_user where id = #{id}
+    </select>
+    <select id="findList" resultType="net.ltf.mp.springboot.domain.User">
+        select * from tb_user
+    </select>
+
+</mapper>
